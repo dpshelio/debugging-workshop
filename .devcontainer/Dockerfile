@@ -24,6 +24,7 @@ RUN wget https://sourceware.org/pub/valgrind/valgrind-3.25.0.tar.bz2 \
     && make -j 4 \
     && sudo make install \
     && cd \
-    && rm -rf valgrind-3.25.0
+    && rm -rf valgrind-3.25.0 \
+    && sudo echo "localhost slots=4" >> /etc/openmpi/openmpi-default-hostfile
 
 COPY --from=uv --chown=vscode: /uv /uvx /bin/
