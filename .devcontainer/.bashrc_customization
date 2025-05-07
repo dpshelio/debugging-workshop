@@ -1,0 +1,15 @@
+# bash completion for mdb and bplot
+eval "$(_MDB_COMPLETE=bash_source mdb)"
+eval "$(_BPLOT_COMPLETE=bash_source bplot)"
+
+# better history defaults
+export HISTCONTROL=ignoredups:erasedups # no duplicate entries
+export HISTSIZE=10000                   # big big history
+export HISTFILESIZE=10000               # big big history
+
+# better history searching
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# automatically expand paths upon tab e.g., $HOME<TAB> -> /home/vscode
+shopt -s direxpand

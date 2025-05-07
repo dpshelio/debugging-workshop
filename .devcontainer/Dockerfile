@@ -4,7 +4,6 @@ ARG DEBIAN_VERSION=bookworm
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
-
 FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
 
 # hadolint ignore=DL3008
@@ -28,3 +27,13 @@ RUN wget https://sourceware.org/pub/valgrind/valgrind-3.25.0.tar.bz2 \
     && sudo echo "localhost slots=4" >> /etc/openmpi/openmpi-default-hostfile
 
 COPY --from=uv --chown=vscode: /uv /uvx /bin/
+
+USER vscode
+
+RUN uv tool install git+https://github.com/TomMelt/mdb.git \
+    && uv tool install git+https://github.com/TomMelt/bplot.git
+
+COPY .bashrc_customization /home/vscode/
+RUN echo "source /home/vscode/.bashrc_customization" >> /home/vscode/.bashrc
+
+WORKDIR /home/vscode/
