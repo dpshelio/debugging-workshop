@@ -1,14 +1,5 @@
 {
   "name": "debug",
   "image": "ghcr.io/cambridge-iccs/debug:latest",
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "containerEnv": {
-    "DISPLAY": "dummy",
-    "PYTHONUNBUFFERED": "True",
-    "UV_LINK_MODE": "copy",
-    "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
-  },
   "remoteUser": "vscode"
 }
