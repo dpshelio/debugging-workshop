@@ -1,2 +1,5 @@
 .*.swp
 *.exe
+*.log
+*.dmp.*
+.mdb.appfile
