@@ -1,0 +1,8 @@
+command adv gather.f90:28
+command p check
+plot check
+command 2 set var check=1
+command u 33
+select 0
+dump recvbuf
+!bplot -f recvbuf.dmp.0 -d i -s 40,1 -r 0,:

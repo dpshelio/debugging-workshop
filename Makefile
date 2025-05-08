@@ -13,12 +13,15 @@ CXX:=mpic++
 FLAGS=-g -O0
 .PHONY: all cpu gpu
 
-cpu: array.exe
+cpu: array.exe gather.exe
 gpu: saxpy-mpi.exe
 all: cpu gpu
 
 array.exe: array.cpp
 	$(CXX) $(FLAGS) $^ -o $@
+
+gather.exe: gather.f90
+	$(FC) $(FLAGS) $^ -o $@
 
 simple-mpi-cpp.exe: simple-mpi-cpp.cpp
 	$(CXX) $(FLAGS) $^ -o $@
