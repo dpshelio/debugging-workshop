@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
   std::vector<double> data(N);
 
   if (rank == 0) {
-    // Generate sine values between 0 and 4\u03c0
+    // Generate sine values between 0 and 4*Pi
     double step = (4.0 * M_PI) / (N - 1);
     for (int i = 0; i < N; ++i) {
       double x = i * step;
