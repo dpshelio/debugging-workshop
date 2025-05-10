@@ -1,5 +1,9 @@
 {
   "name": "debug",
   "image": "ghcr.io/cambridge-iccs/debug:latest",
+  "extensions": [
+    "fortran-lang.linter-gfortran",
+    "ms-vscode.cpptools-extension-pack"
+  ],
   "remoteUser": "vscode"
 }
