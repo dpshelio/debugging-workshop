@@ -1,4 +1,4 @@
-command adv gather.f90:41
+command adv analysis.f90:41
 command p check
 plot check
 command 2 set var check=3
