@@ -14,9 +14,12 @@ FLAGS=-g -O0 -Wall -fno-omit-frame-pointer
 FFLAGS=-ffpe-trap=invalid,zero,overflow
 .PHONY: all cpu gpu
 
-cpu: array.exe analysis.exe sums.exe
+cpu: array.exe analysis.exe sums.exe occassional.exe
 gpu: saxpy-mpi.exe
 all: cpu gpu
+
+occassional.exe: occassional.cpp
+	$(CXX) $(FLAGS) $^ -o $@
 
 array.exe: array.cpp
 	$(CXX) $(FLAGS) $^ -o $@
