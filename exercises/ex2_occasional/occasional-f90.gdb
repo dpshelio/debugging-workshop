@@ -1,5 +1,5 @@
 start
-rb _gfortran_runtime_error_at
+b _gfortran_runtime_error_at
 b _exit
 commands
 silent
