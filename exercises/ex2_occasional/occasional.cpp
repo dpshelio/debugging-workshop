@@ -13,6 +13,7 @@ int main() {
 
   std::cout << "Generated number: " << randomNumber << std::endl;
 
+  // Sleep for 1 second
   std::this_thread::sleep_for(std::chrono::seconds(1));
 
   // Crash the program if the number is greater than 75
