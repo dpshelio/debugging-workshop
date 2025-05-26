@@ -4,27 +4,36 @@ ARG DEBIAN_VERSION=bookworm
 
 FROM ghcr.io/astral-sh/uv:$UV_VERSION AS uv
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
+# --- Valgrind build stage ---
+FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION AS valgrind-build
 
-# hadolint ignore=DL3008
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    # For OpenCV etc...
-    libgl1 libglib2.0-0 libopenmpi-dev gfortran gdb \
-    # To remove the image size, it is recommended refresh the package cache as follows
+    wget gcc g++ make \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# install valgrind
+WORKDIR /tmp
 RUN wget https://sourceware.org/pub/valgrind/valgrind-3.25.0.tar.bz2 \
     && tar xf valgrind-3.25.0.tar.bz2 \
     && cd valgrind-3.25.0 \
-    && ./configure --prefix=/usr \
+    && ./configure --prefix=/valgrind \
     && make -j 4 \
-    && sudo make install \
-    && cd \
-    && rm -rf valgrind-3.25.0 \
-    && sudo echo "localhost slots=4" >> /etc/openmpi/openmpi-default-hostfile
+    && make install
+
+# --- Main image ---
+FROM mcr.microsoft.com/vscode/devcontainers/base:$DEBIAN_VERSION
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    libopenmpi-dev gfortran gdb \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy Valgrind from build stage
+COPY --from=valgrind-build /valgrind /usr
+
+RUN echo "localhost slots=4" >> /etc/openmpi/openmpi-default-hostfile
 
 COPY --from=uv --chown=vscode: /uv /uvx /bin/
 
