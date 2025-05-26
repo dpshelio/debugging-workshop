@@ -5,8 +5,11 @@
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools",
-        "fortran-lang.linter-gfortran"
+        "ms-vscode.cpptools"
+      ],
+      "commands": [
+        "workbench.action.terminal.new",
+        "markdown.showPreviewToSide"
       ]
     }
   },
