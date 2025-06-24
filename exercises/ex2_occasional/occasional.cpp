@@ -4,6 +4,11 @@
 #include <iostream>
 #include <thread>
 
+void decoyFunction() {
+  // This function does nothing but serves as a decoy
+  return;
+}
+
 int main() {
   // Seed the random number generator
   std::srand(std::time(0));
@@ -12,6 +17,8 @@ int main() {
   int randomNumber = std::rand() % 100;
 
   std::cout << "Generated number: " << randomNumber << std::endl;
+
+  decoyFunction(); // Call the decoy function
 
   // Sleep for 1 second
   std::this_thread::sleep_for(std::chrono::seconds(1));

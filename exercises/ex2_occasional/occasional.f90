@@ -9,6 +9,8 @@ program occasional
 
   print *, "Generated number:", randomNumber
 
+  call decoyFunction()
+
   ! Sleep for 1 second
   call sleep(1)
 
@@ -19,4 +21,11 @@ program occasional
   end if
 
   print *, "Program completed successfully."
+
+  contains
+
+  subroutine decoyFunction()
+    ! This function does nothing but serves as a decoy
+    implicit none
+  end subroutine decoyFunction
 end program occasional
