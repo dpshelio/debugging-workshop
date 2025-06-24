@@ -43,7 +43,7 @@ Instructions are provided below.
 
 > [!NOTE]
 > The first time you create this codespace it will take 2-3 minutes to load (whilst it pulls the
-> docker image and runs initial setup). Re-connecting to a previous session is almost immediate.
+> docker image and runs initial setup). Re-connecting to a previous session will be much quicker.
 
 ### Running in Visual Studio Code
 
@@ -54,27 +54,27 @@ Instructions are provided below.
 2. If you haven't already, download the
    "[GitHub Codespaces](https://code.visualstudio.com/docs/remote/codespaces)" extension
     - Click "Extensions" (or press `CTRL+SHIFT+X`)
-      ![codesetup01](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-01.png)
+      ![codesetup01](imgs/code-setup-01.png)
     - Type "GitHub Codespaces"
-      ![codesetup02](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-02.png)
+      ![codesetup02](imgs/code-setup-02.png)
 3. Click on "Remote Explorer" in the side bar
 4. If you haven't already, sign into your GitHub account
-   ![codesetup03](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-03.png)
+   ![codesetup03](imgs/code-setup-03.png)
 5. Click "Create Codespace"
-   ![codesetup04](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-04.png)
+   ![codesetup04](imgs/code-setup-04.png)
 6. Type "https://github.com/Cambridge-ICCS/summer-school-debugging" into the search bar and press
    the `Enter` key.
-   ![codesetup05](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-05.png)
+   ![codesetup05](imgs/code-setup-05.png)
 7. Click "**main** _Default Branch_"
-   ![codesetup06](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-06.png)
+   ![codesetup06](imgs/code-setup-06.png)
 8. Click "2 cores, 8 GB RAM, 32 GB storage"
-   ![codesetup07](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-07.png)
+   ![codesetup07](imgs/code-setup-07.png)
 
 
 9. This will connect to a remote instance of the GitHub codespace. You are now ready to start the
    course! :tada:
 
-   ![codesetup08](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/code-setup-08.png)
+   ![codesetup08](imgs/code-setup-08.png)
 
 </details>
 
@@ -87,11 +87,11 @@ Instructions are provided below.
    [https://github.com/Cambridge-ICCS/summer-school-debugging](https://github.com/Cambridge-ICCS/summer-school-debugging)
 
 2. Click on the `+` icon to create a new on branch `main`
-   ![chromesetup01](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/chrome-setup-01.png)
+   ![chromesetup01](imgs/chrome-setup-01.png)
 
 3. This will open a new tab in your browser with a VSCode interface connected to the GitHub
    codespace. You are now ready to start the course! :tada:
-   ![chromesetup02](https://github.com/Cambridge-ICCS/summer-school-debugging/blob/update-readme/imgs/chrome-setup-02.png)
+   ![chromesetup02](imgs/chrome-setup-02.png)
 
 </details>
 
@@ -99,3 +99,11 @@ Instructions are provided below.
 
 Now that we have the codespace running in VSCode or the browser, we can get started with the course.
 All of the following instructions will be the same regardless of how you setup your codespace.
+
+Navigate into the exercises folder and start with exercise 1.
+
+```bash
+cd exercises/ex1_play/
+```
+
+Start reading through the `README.md` for that exercise i.e., `exercises/ex1_play/README.md`.
