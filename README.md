@@ -20,6 +20,18 @@ language over another, but I have tried to keep the examples as simple as possib
 
 If you finish the examples early, feel free to tackle your own codes in the wild :mag::bug:.
 
+## Prerequisites
+
+### Background knowledge
+* Unix command line (things like `cd`ing, running the `make` command and running binaries like this `./myprogram.exe`)
+* Basic experience with a compiled language (C/C++/Fortran or Rust)
+* No prior knowledge of debuggers is assumed
+* (optional) Experience with MPI programs
+
+### Software
+* (optional but recommended) install [VS Code](https://code.visualstudio.com/)
+* If you do not have VS Code, you will need a browser (Firefox/Chrome have been tested) 
+
 ## Getting Started
 
 This course is designed to run in [GitHub codespaces](https://github.com/features/codespaces). There
