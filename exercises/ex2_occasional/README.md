@@ -121,7 +121,7 @@ Breakpoint 3, decoyFunction () at occasional.cpp:9
 $1 = "we made it to the decoyFunction!"
 ```
 
-It works! we can see our text. You can convince yourself by running the program a few more times if
+It works! We can see our text. You can convince yourself by running the program a few more times if
 you wish.
 
 > [!NOTE]

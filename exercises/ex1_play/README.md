@@ -103,7 +103,7 @@ Interfaces) but for the terminal. TUIs are particularly helpful for working on r
 HPC, because they do not require X11 forwarding. This makes them more responsive and sometimes the
 only option if X11 forwarding is disabled/blocked.
 
-To run gdb with the TUI we add the following flag `--tui`
+To run `gdb` with the TUI we add the following flag `--tui`
 
 ```
 $ gdb -q --tui ./play-f90.exe
@@ -233,8 +233,10 @@ To delete these breakpoints we have two options
 * `clear`
 * `delete`
 
-`clear` will take a linespec like the one used to set the breakpoint in the first place i.e.,
-`play.f90:30`. So we can run `clear play.f90:30` to remove breakpoint 2.
+`clear` will take a
+[_linespec_](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Linespec-Locations.html) like
+the one used to set the breakpoint in the first place i.e., `play.f90:30`. So we can run `clear
+play.f90:30` to remove breakpoint 2.
 
 ```
 (gdb) clear play.f90:30

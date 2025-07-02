@@ -52,7 +52,7 @@ squares is incorrect. So how should we start debugging this scenario.
 
 One approach is to set a breakpoint at the site of the problem, and then work our way backwards.
 
-I will show the commands for the C++ version but this applies just as equally to the fortran
+I will show the commands for the C++ version but this applies just as equally to the Fortran
 example.
 
 First we will start our program in the `gdb` debugger
@@ -73,8 +73,8 @@ Temporary breakpoint 1, main () at sums.cpp:13
 ```
 
 Recall that our code failed with error saying the sum of squares is wrong. That print statement
-occurs on line 62, in functon `validate_square_sum`. Let's set a breakpoint (`break`) here and start
-our investigation.
+occurs on line 62, in function `validate_square_sum`. Let's set a breakpoint (`break`) here and
+start our investigation.
 
 ```
 $ (gdb) break validate_square_sum
@@ -108,7 +108,7 @@ $2 = 42925
 We can see that indeed `sum` (=42975) does not equal `(N * (N + 1) * (2 * N + 1)) / 6` (=42925). For
 some reason our sum is 50 larger than it should be, but we still don't know why.
 
-We can use `backtrace` to see our current position in the stackframe. This will essentially show us
+We can use `backtrace` to see our current position in the stack frame. This will essentially show us
 a history of where we have come from, which functions were called to lead us to where we are now.
 
 ```
@@ -136,7 +136,7 @@ stack frame there are three commands we will use
 `backtrace` command we can see that there are 3 frames; 0, 1 and 2. `frame 2` would take us to `main
 () at sums.cpp:15`. `up` moves up one stack frame and `down` moves back down.
 
-Lets go up one stack frame using `up` and insepct the context of the previous stack frame.
+Lets go up one stack frame using `up` and inspect the context of the previous stack frame.
 
 ```
 (gdb) up
@@ -223,7 +223,7 @@ Hardware watchpoint 2: array_squares[0]
 ```
 
 watchpoints are a bit like breakpoints in that we can continue code execution, but now `gdb` will
-pause everytime our memory is written-to or read-from. So lets run `continue`.
+pause every time our memory is written-to or read-from. So lets run `continue`.
 
 ```
 (gdb) continue
@@ -237,8 +237,8 @@ initialize_squares (arr=0x7ffed10c17c8) at sums.cpp:42
 42        for (int i = 0; i < N; ++i) {
 ```
 
-From the output we can see that gdb has detected our memory change from `Old value = 0` to `New
-value = 1` and this occured on line 42 inside the `initialize_squares` function. This is the loop
+From the output we can see that `gdb` has detected our memory change from `Old value = 0` to `New
+value = 1` and this occurred on line 42 inside the `initialize_squares` function. This is the loop
 where we initialize our array. So this is expected. Lets keep going...
 
 ```
@@ -293,16 +293,16 @@ sum of integers from 1 to 50 is :: 1275
 sum of the squares of integers from 1 to 50 is :: 42925
 ```
 
-Horay! :tada: The program is now running successfully.
+Hooray! :tada: The program is now running successfully.
 
 ### Putting it all together
 
-- [ ] play around on the stack, use combinations of `up`, `down` and `frame` to naviagte the
+- [ ] play around on the stack, use combinations of `up`, `down` and `frame` to navigate the
   stack frame
 - [ ] what can you see in each stack frame (try `info locals`, `info args`)
 - [ ] go back to exercise 1 and see if you can set a watchpoint on `int_var`
 
 > [!NOTE]
-> One interesting point of this exercise is it helps us to track down a memory error that
-> even `valgrind` and memory santizers won't detect. For some use cases a debugger may be your only
+> One interesting point of this exercise is it helps us to track down a memory error that even
+> `valgrind` and memory sanitizers won't detect. For some use cases a debugger may be your only
 > option.

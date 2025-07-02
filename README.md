@@ -62,7 +62,7 @@ Instructions are provided below.
 <details>
 <summary>(click here to expand instructions)</summary>
 
-1. Open VSCode
+1. Open Visual Studio Code (`code`)
 2. If you haven't already, download the
    "[GitHub Codespaces](https://code.visualstudio.com/docs/remote/codespaces)" extension
     - Click "Extensions" (or press `CTRL+SHIFT+X`)
@@ -74,18 +74,15 @@ Instructions are provided below.
    ![codesetup03](imgs/code-setup-03.png)
 5. Click "Create Codespace"
    ![codesetup04](imgs/code-setup-04.png)
-6. Type "https://github.com/Cambridge-ICCS/summer-school-debugging" into the search bar and press
+6. Type `https://github.com/Cambridge-ICCS/summer-school-debugging` into the search bar and press
    the `Enter` key.
    ![codesetup05](imgs/code-setup-05.png)
 7. Click "**main** _Default Branch_"
    ![codesetup06](imgs/code-setup-06.png)
 8. Click "2 cores, 8 GB RAM, 32 GB storage"
    ![codesetup07](imgs/code-setup-07.png)
-
-
 9. This will connect to a remote instance of the GitHub codespace. You are now ready to start the
    course! :tada:
-
    ![codesetup08](imgs/code-setup-08.png)
 
 </details>
@@ -97,12 +94,10 @@ Instructions are provided below.
 
 1. Navigate to
    [https://github.com/Cambridge-ICCS/summer-school-debugging](https://github.com/Cambridge-ICCS/summer-school-debugging)
-
 2. Click on the `+` icon to create a new on branch `main`
    ![chromesetup01](imgs/chrome-setup-01.png)
-
-3. This will open a new tab in your browser with a VSCode interface connected to the GitHub
-   codespace. You are now ready to start the course! :tada:
+3. This will open a new tab in your browser with a Visual Studio Code interface connected to the
+   GitHub codespace. You are now ready to start the course! :tada:
    ![chromesetup02](imgs/chrome-setup-02.png)
 
 </details>
