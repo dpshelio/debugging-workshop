@@ -12,9 +12,13 @@
         "bierner.markdown-preview-github-styles"
       ],
       "commands": [
-        "workbench.action.terminal.new",
-        "markdown.showPreviewToSide"
-      ]
+        "workbench.action.terminal.new"
+      ],
+      "settings": {
+        "workbench.editorAssociations": {
+            "*.md": "vscode.markdown.preview.editor"
+        }
+      }
     }
   },
   "remoteUser": "vscode"
