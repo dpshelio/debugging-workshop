@@ -8,8 +8,9 @@
         "ms-vscode.cpptools",
         "bierner.markdown-checkbox",
         "bierner.markdown-emoji",
-        "bierner.markdown-alert",
-        "bierner.markdown-preview-github-styles"
+        "kejun.markdown-alert",
+        "bierner.markdown-preview-github-styles",
+        "fortran-lang.linter-gfortran"
       ],
       "commands": [
         "workbench.action.terminal.new"
@@ -21,5 +22,6 @@
       }
     }
   },
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "postCreateCommand": "code README.md"
 }
