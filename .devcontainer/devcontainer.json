@@ -5,7 +5,11 @@
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.cpptools"
+        "ms-vscode.cpptools",
+        "bierner.markdown-checkbox",
+        "bierner.markdown-emoji",
+        "bierner.markdown-alert",
+        "bierner.markdown-preview-github-styles"
       ],
       "commands": [
         "workbench.action.terminal.new",
