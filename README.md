@@ -1,4 +1,4 @@
-# summer-school-debugging
+# Debugging Workshop
 
 Welcome to the Debugging workshop at ICCS Summer School 2025. This tutorial will introduce the
 basics of debuggers with some carefully chosen examples, to demonstrate the power of debuggers :zap:.
@@ -74,7 +74,7 @@ Instructions are provided below.
    ![codesetup03](imgs/code-setup-03.png)
 5. Click "Create Codespace"
    ![codesetup04](imgs/code-setup-04.png)
-6. Type `https://github.com/Cambridge-ICCS/summer-school-debugging` into the search bar and press
+6. Type `https://github.com/Cambridge-ICCS/debugging-workshop` into the search bar and press
    the `Enter` key.
    ![codesetup05](imgs/code-setup-05.png)
 7. Click "**main** _Default Branch_"
@@ -93,7 +93,7 @@ Instructions are provided below.
 <summary>(click here to expand instructions)</summary>
 
 1. Navigate to
-   [https://github.com/Cambridge-ICCS/summer-school-debugging](https://github.com/Cambridge-ICCS/summer-school-debugging)
+   [https://github.com/Cambridge-ICCS/debugging-workshop](https://github.com/Cambridge-ICCS/debugging-workshop)
 2. Click on the `+` icon to create a new on branch `main`
    ![chromesetup01](imgs/chrome-setup-01.png)
 3. This will open a new tab in your browser with a Visual Studio Code interface connected to the
